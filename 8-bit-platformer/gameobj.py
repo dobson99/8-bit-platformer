@@ -299,9 +299,7 @@ class Game():
             contactX = True
             contactYBottom = True
             contactYTop = True
-            projectedMoveX = 0    
-            projectedMoveY = 0    
-            
+
             
             for i in range(1,Constants.CONTACT_SOLVER_ITERATIONS):
                 if not (contactX or contactYBottom or contactYTop):
@@ -320,7 +318,7 @@ class Game():
                 # check collision with blocks
                 for b in self.currentRoom.blocks:
                     if (contactX or  contactYBottom or contactYTop):
-                        continue # I think break but might be continue
+                        continue
                     
                     for name in self.playerCollisionPoints:
                         if name == Constants.TOP and nextMoveY > 0: continue
@@ -339,22 +337,13 @@ class Game():
                             projectedMoveY = 0  
                             
                         collisionPoint1 = self.playerCollisionPoints[name][0]
-#                         collisionPoint2 = self.playerCollisionPoints[name][1]
-                        
+
                         collisionPoint1X = collisionPoint1[0]
                         collisionPoint1Y = collisionPoint1[1]
                         
-#                         collisionPoint2X = collisionPoint2[0]
-#                         collisionPoint2Y = collisionPoint2[1]
-                        
                         pointToCheck1 = [collisionPoint1X + self.playerX + projectedMoveX, collisionPoint1Y + self.playerY + projectedMoveY]
-#                         pointToCheck2 = [collisionPoint2X + self.playerX + projectedMoveX, collisionPoint2Y + self.playerY + projectedMoveY]
-                    
+
                         
-                        #pygame.draw.circle(self.screen,(255,255,255), (30,19), 5, 1 )
-                        
-#                         while (b.image_rect.collidepoint(pointToCheck1) or b.image_rect.collidepoint(pointToCheck2)):
-# In the exmple she does while worldObjects[o].containsPoint(point to check)
                         while (b.image_rect.collidepoint(pointToCheck1)):
                             if name == Constants.LEFT: 
                                 projectedMoveX = projectedMoveX + 1.0
