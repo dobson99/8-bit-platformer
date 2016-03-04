@@ -4,7 +4,7 @@
 
 I started to write this platform game as a bit of fun while learning python
 and to start to teach my kids programming. It's a hark back to the golden
-8 bit days and currently is complete with the occasionaly, highly realistic
+8 bit days and includes one or two highly realistic
 FALLING THROUGH SOLID PLATFORMS GLITCHES (which I have to fix :)
 
 Obviously this is a work in progress and so it's a bit rough around the edges but the
