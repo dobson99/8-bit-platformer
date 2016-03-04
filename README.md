@@ -18,6 +18,8 @@ of her C++ algorithm which I ported to Python - this was a) great fun and b) ver
 Move between rooms using O and P and spacebar. Collect keys!
 LOTS more to do on this but the basic physics and structure is in place.
 
+![2D platformer screenshot](/docs/screenshot.png?raw=true "2D Platformer")
+
 ## Setup
 Windows (I used window 7, windows 10)
 Python 3.x (I used 3.3)
